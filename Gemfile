@@ -21,6 +21,7 @@ group :development, :test do
 end
 group :production do
     gem "pg"   #heroku supports only pg db
+    gem 'rails_12factor'
 end
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
