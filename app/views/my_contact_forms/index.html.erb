@@ -1,0 +1,27 @@
+<h1>Listing my_contact_forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_contact_forms.each do |my_contact_form| %>
+      <tr>
+        <td><%= my_contact_form.name %></td>
+        <td><%= my_contact_form.address %></td>
+        <td><%= link_to 'Show', my_contact_form %></td>
+        <td><%= link_to 'Edit', edit_my_contact_form_path(my_contact_form) %></td>
+        <td><%= link_to 'Destroy', my_contact_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My contact form', new_my_contact_form_path %>
